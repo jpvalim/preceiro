@@ -277,7 +277,7 @@ function renderResultado(lista) {
       ">
 
         <div style="display:flex; justify-content:space-between; align-items:center;">
-          <strong style="font-size:16px;">${item.item}</strong>
+          <strong style="font-size:16px;">${item.nome_completo}</strong>
           <span style="
             font-size:12px;
             padding:4px 8px;
@@ -290,6 +290,7 @@ function renderResultado(lista) {
         </div>
 
         <div style="margin-top:10px; font-size:14px; color:#555;">
+          <div>🛒 <strong>Preço:</strong> R$ ${item.item ?? '-'}</div>
           <div>💰 <strong>Preço:</strong> R$ ${item.preco ?? '-'}</div>
           <div>🏪 <strong>Mercado:</strong> ${item.mercado ?? '-'}</div>
           <div>📦 <strong>Quantidade:</strong> ${item.quantidade}</div>
