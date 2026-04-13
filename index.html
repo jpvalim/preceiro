@@ -261,6 +261,7 @@ async function enviar() {
 }
 
 function renderResultado(lista) {
+  
   const div = document.getElementById("resultado");
 
   div.innerHTML = `
@@ -290,10 +291,11 @@ function renderResultado(lista) {
         </div>
 
         <div style="margin-top:10px; font-size:14px; color:#555;">
-          <div>🛒 <strong>Preço:</strong> R$ ${item.item ?? '-'}</div>
+          <div>🛒 <strong>Item:</strong> ${item.item ?? '-'}</div>
           <div>💰 <strong>Preço:</strong> R$ ${item.preco ?? '-'}</div>
           <div>🏪 <strong>Mercado:</strong> ${item.mercado ?? '-'}</div>
-          <div>📦 <strong>Quantidade:</strong> ${item.quantidade}</div>
+          <div>📦 <strong>Quantidade:</strong> ${item.quantidade ?? '-'}</div>
+          <div>🗓️<strong>Validade:</strong> ${item.validade ?? '-'}</div>
         </div>
 
       </div>
